@@ -13,7 +13,7 @@ function Navbar() {
   const [navbar, setNavbar] = useState(false);
   const [location, setLocation] = useState("inicio");
   window.addEventListener("scroll", () => {
-    if (window.scrollY >= window.innerHeight) {
+    if (window.scrollY >= window.innerHeight - window.innerHeight * 0.1) {
       setNavbar(true);
     } else {
       setNavbar(false);
@@ -66,28 +66,34 @@ function Navbar() {
                 duration={500}
                 onSetActive={(e) => setLocation(e)}
                 position="relative"
-                
                 _before={
                   location === item.path
                     ? {
+                        left: "0%",
                         content: `""`,
                         position: "absolute",
+                        top: "1.5rem",
                         width: "100%",
-                        height: "5px",
-                        bg: "red",
-                        transition: "all .5s ease"
+                        height: "2px",
+                        bg: "linear-gradient(90deg, rgba(123,0,142,1) 0%, rgba(121,9,48,1) 35%, rgba(149,0,79,1) 100%)",
+                        transition: "all .5s ease",
                       }
                     : {
                         content: `""`,
                         position: "absolute",
                         width: "0%",
-                        height: "5px",
-                        bg: "red",
-                        transition: "all .5s ease"
+                        left: "40%",
+                        top: "1.5rem",
+                        height: "2px",
+                        bg: "linear-gradient(90deg, rgba(123,0,142,1) 0%, rgba(121,9,48,1) 35%, rgba(149,0,79,1) 100%)",
+                        transition: "all .5s ease",
                       }
                 }
               >
-                <Text fontSize="lg" color="#a1a1a1">
+                <Text
+                  fontSize="lg"
+                  color={location === item.path ? "#dedede" : "#a1a1a1"}
+                >
                   {item.value}
                 </Text>
               </LinkChakra>
