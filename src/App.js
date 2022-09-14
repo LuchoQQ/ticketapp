@@ -14,6 +14,8 @@ import {
 import { motion, isValidMotionProp } from "framer-motion";
 import { useState } from "react";
 import "./App.css";
+import CardServices from "./components/CardServices";
+import EventCard from "./components/EventCard";
 import Header from "./components/Header";
 import HomePage from "./layouts/HomePage";
 
@@ -50,65 +52,103 @@ function App() {
             bg="#dedede"
             justifyContent="center"
             alignContent="center"
-            autoFlow="column"
-            gap="4rem"
+            gap="2rem"
           >
-            <Flex
-              w="20vw"
-              h="60vh"
-              bg="#202020"
+            <Text
+              fontSize="6xl"
+              textAlign="center"
               position="relative"
-              justifyContent="center"
-              alignContent="center"
               _before={{
                 content: `""`,
-                alignSelf: "center",
                 position: "absolute",
-                width: "97%",
-                marginLeft: "2%",
-                height: "98%",
-                bg: "#202020",
-                zIndex: 9999999,
+                w: "20%",
+                h: "2px",
+                bg: "#505050",
+                top: "50%",
+                left: "15%",
+                zIndex: 1,
               }}
+              _after={{
+                content: `""`,
+                position: "absolute",
+                w: "20%",
+                h: "2px",
+                bg: "#505050",
+                top: "50%",
+                left: "65%",
+                zIndex: 1,
+              }}
+              bg="#dedede"
+              zIndex={100}
             >
-              <ChakraBox
-                animate={{
-                  rotate: [0, 360],
-                }}
-                // @ts-ignore no problem in operation, although type error appears.
-                transition={{
-                  duration: 5,
-                  ease: "linear",
-                  repeat: Infinity,
-                  repeatType: "loop",
-                }}
-                w="20vw"
-                h="60vh"
-                left="-50%"
-                top="-50%"
-                position="absolute"
-                bg="linear-gradient(0deg, transparent, red, red)"
-                transformOrigin="bottom right"
-
-                /* _after={{
-                  content: `""`,
-                  position: "absolute",
-                  width: "20vw",
-                  height: "100vh",
-                  top: "-120%",
-                  left: "-50%",
-                  bg: "linear-gradient(0deg, transparent 0%,  red, red, red)",
-                  transformOrigin: "bottom right",
-                  zIndex: 999999,
-                }} */
-              />
-            </Flex>
-            <Box w="20vw" h="60vh" bg="#202020"></Box>
-            <Box w="20vw" h="60vh" bg="#202020"></Box>
+              Events
+            </Text>
+            <Grid
+              justifyContent="center"
+              alignContent="center"
+              autoFlow="column"
+              gap="4rem"
+            >
+              <EventCard />
+              <EventCard />
+              <EventCard />
+            </Grid>
           </Grid>
         </section>
         <section className="about">
-          <Grid w="100vw" h="100vh" bg="#121212"></Grid>
+          <Grid
+            w="100vw"
+            h="100vh"
+            bg="#121212"
+            justifyContent="center"
+            alignContent="center"
+            gap="1rem"
+            position="relative"
+          >
+            <Text
+              fontSize="6xl"
+              textAlign="center"
+              position="relative"
+              _before={{
+                content: `""`,
+                position: "absolute",
+                w: "20%",
+                h: "2px",
+                bg: "#505050",
+                top: "50%",
+                left: "15%",
+                zIndex: 1,
+              }}
+              _after={{
+                content: `""`,
+                position: "absolute",
+                w: "20%",
+                h: "2px",
+                bg: "#505050",
+                top: "50%",
+                left: "65%",
+                zIndex: 1,
+              }}
+              zIndex={100}
+              color="#dedede"
+            >
+              Services
+            </Text>
+            <Grid autoFlow="column" gap="2rem">
+              <CardServices
+                color="#9e002c"
+                base="linear-gradient(270deg, rgba(232,0,65,1) 12%, rgba(186,0,52,1) 45%, rgba(158,0,44,1) 84%)"
+              />
+              <CardServices
+                color={"linear-gradient(0deg, transparent, #005dba, #005dba)"}
+                base="linear-gradient(270deg, rgba(0,93,186,1) 12%, rgba(27,130,232,1) 45%, rgba(46,149,252,1) 84%)"
+              />
+              <CardServices
+                color="#cd5400"
+                base="linear-gradient(270deg, rgba(205,84,0,1) 14%, rgba(205,84,0,1) 45%, rgba(255,104,0,1) 84%)"
+              />
+            </Grid>
+          </Grid>
         </section>
         <section className="contact">
           <Grid w="100vw" h="100vh" bg="#202020"></Grid>

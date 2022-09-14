@@ -50,7 +50,7 @@ function Navbar() {
         transition={"all 0.5s ease"}
         alignItems="center"
         mt="auto"
-        zIndex={999}
+        zIndex={99999999999999}
         position={navbar ? "fixed" : "relative"}
         bg={navbar ? "#101010" : "rgba(0,0,0,0)"}
       >
@@ -66,6 +66,7 @@ function Navbar() {
                 duration={500}
                 onSetActive={(e) => setLocation(e)}
                 position="relative"
+                style={{ textDecoration: 'none' }}
                 _before={
                   location === item.path
                     ? {
