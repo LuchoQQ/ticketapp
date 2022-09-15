@@ -10,6 +10,12 @@ import {
   keyframes,
   chakra,
   shouldForwardProp,
+  VStack,
+  FormControl,
+  FormLabel,
+  Input,
+  Checkbox,
+  Textarea,
 } from "@chakra-ui/react";
 import { motion, isValidMotionProp } from "framer-motion";
 import { useState } from "react";
@@ -18,9 +24,20 @@ import CardServices from "./components/CardServices";
 import EventCard from "./components/EventCard";
 import Header from "./components/Header";
 import HomePage from "./layouts/HomePage";
-
+import { useFormik } from "formik";
+import ContactPage from "./layouts/ContactPage";
 function App() {
   const theme = useTheme();
+  const formik = useFormik({
+    initialValues: {
+      email: "",
+      name: "",
+      message: "",
+    },
+    onSubmit: (values) => {
+      alert(JSON.stringify(values, null, 2));
+    },
+  });
 
   const animationKeyframes = keyframes`
   0% { transform: rotate(0deg) }
@@ -136,22 +153,25 @@ function App() {
             </Text>
             <Grid autoFlow="column" gap="2rem">
               <CardServices
-                color="#9e002c"
+                color="linear-gradient(0deg, transparent, #9e002c, #9e002c)"
+                neutral="#9e002c"
                 base="linear-gradient(270deg, rgba(232,0,65,1) 12%, rgba(186,0,52,1) 45%, rgba(158,0,44,1) 84%)"
               />
               <CardServices
                 color={"linear-gradient(0deg, transparent, #005dba, #005dba)"}
+                neutral="#005dba"
                 base="linear-gradient(270deg, rgba(0,93,186,1) 12%, rgba(27,130,232,1) 45%, rgba(46,149,252,1) 84%)"
               />
               <CardServices
-                color="#cd5400"
+                color="linear-gradient(0deg, transparent, #cd5400, #cd5400)"
+                neutral="#cd5400"
                 base="linear-gradient(270deg, rgba(205,84,0,1) 14%, rgba(205,84,0,1) 45%, rgba(255,104,0,1) 84%)"
               />
             </Grid>
           </Grid>
         </section>
         <section className="contact">
-          <Grid w="100vw" h="100vh" bg="#202020"></Grid>
+          <ContactPage />
         </section>
         <Header />
       </Grid>

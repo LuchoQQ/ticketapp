@@ -14,7 +14,7 @@ import React from "react";
 import { MdOutlineDesignServices } from "react-icons/md";
 import { BsBrush } from "react-icons/bs";
 
-function CardServices({ color, base }) {
+function CardServices({ color, base, neutral }) {
   const theme = useTheme();
   const ChakraBox = chakra(motion.div, {
     /**
@@ -96,7 +96,7 @@ function CardServices({ color, base }) {
             <Icon
               as={BsBrush}
               w="100%"
-              fill="#dedede"
+              fill={neutral}
               fontSize={["4xl", "4xl", "4xl", "4xl", "5xl", "7xl"]}
             />
             <Text
