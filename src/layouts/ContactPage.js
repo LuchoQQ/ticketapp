@@ -13,6 +13,7 @@ import {
 } from "@chakra-ui/react";
 import { useFormik } from "formik";
 import React from "react";
+import SectionTitle from "../components/SectionTitle";
 function ContactPage() {
   const theme = useTheme();
   const formik = useFormik({
@@ -37,35 +38,7 @@ function ContactPage() {
         fontFamily={theme.fonts.primary}
         gap="3rem"
       >
-        <Text
-          fontSize="6xl"
-          textAlign="center"
-          position="relative"
-          color="#202020"
-          _before={{
-            content: `""`,
-            position: "absolute",
-            w: "20%",
-            h: "2px",
-            bg: "#505050",
-            top: "50%",
-            left: "5%",
-            zIndex: 1,
-          }}
-          _after={{
-            content: `""`,
-            position: "absolute",
-            w: "20%",
-            h: "2px",
-            bg: "#505050",
-            top: "50%",
-            left: "75%",
-            zIndex: 1,
-          }}
-          zIndex={100}
-        >
-          Contact us
-        </Text>
+        <SectionTitle title='Contact' bg='#dedede'/>
         <Box minW="320px" w="50vw" maxW="500px" bg="#202020" p="2rem">
           <form onSubmit={formik.handleSubmit}>
             <VStack spacing={4} align="flex-start">

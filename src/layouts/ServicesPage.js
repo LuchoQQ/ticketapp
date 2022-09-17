@@ -1,6 +1,7 @@
 import { Grid, Text } from "@chakra-ui/react";
 import React from "react";
 import CardServices from "../components/CardServices";
+import SectionTitle from "../components/SectionTitle";
 
 function ServicesPage() {
   return (
@@ -15,25 +16,7 @@ function ServicesPage() {
         position="relative"
         pY={["2rem"]}
       >
-        <Text
-          fontSize="6xl"
-          textAlign="center"
-          position="relative"
-          zIndex={100}
-          color="#dedede"
-          bg="#121212"
-          _before={{
-            content: `""`,
-            position: "absolute",
-            width: "100%",
-            height: "2px",
-            bg: "#fff",
-            left: "-80%",
-            top: "50%",
-          }}
-        >
-          Services
-        </Text>
+        <SectionTitle title='Services' bg='#121212' color='#ababab'/>
         <Grid
           templateColumns={[
             "repeat(1, 1fr)",
