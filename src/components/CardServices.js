@@ -26,6 +26,7 @@ function CardServices({ color, base, neutral }) {
   return (
     <>
       <ChakraBox
+        cursor="pointer"
         as={Flex}
         animate={{
           rotate: [0, 360],

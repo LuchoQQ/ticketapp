@@ -30,8 +30,8 @@ function Navbar() {
       value: "Eventos",
     },
     {
-      path: "about",
-      value: "About",
+      path: "services",
+      value: "Services",
     },
     {
       path: "contact",
