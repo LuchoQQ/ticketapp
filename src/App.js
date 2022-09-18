@@ -3,25 +3,13 @@ import {
   Button,
   Flex,
   Grid,
-  Icon,
-  Image,
-  Text,
   useTheme,
   keyframes,
   chakra,
   shouldForwardProp,
-  VStack,
-  FormControl,
-  FormLabel,
-  Input,
-  Checkbox,
-  Textarea,
 } from "@chakra-ui/react";
 import { motion, isValidMotionProp } from "framer-motion";
-import { useState } from "react";
 import "./App.css";
-import CardServices from "./components/CardServices";
-import EventCard from "./components/EventCard";
 import Header from "./components/Header";
 import HomePage from "./layouts/HomePage";
 import { useFormik } from "formik";
