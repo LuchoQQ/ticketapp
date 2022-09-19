@@ -31,22 +31,30 @@ function HomePage() {
           justifyContent="center"
           alignContent="center"
         >
-          <Box alignSelf='center'>
+          <Box alignSelf="center">
             <Flex>
-              <Flex gap="1rem">
-                <Icon as={GiCrownedSkull} fontSize="6xl" fill="#dedede" />
+              <Flex>
+                <Icon mr='1rem' as={GiCrownedSkull} fontSize="6xl" fill="#dedede" />
                 <Text
-                  fontSize="3xl"
-                  color="#dedede"
-                  fontFamily={theme.fonts.primary}
-                  alignSelf='center'
+                  fontSize="2xl"
+                  color="#9e002c"
+                  fontFamily={theme.fonts.secondary}
+                  alignSelf="center"
                 >
-                  TicketApp!
+                  TICKET
+                </Text>
+                <Text
+                  fontSize="4xl"
+                  color="#820A7E"
+                  fontFamily={theme.fonts.secondary}
+                  alignSelf="center"
+                >
+                  App
                 </Text>
               </Flex>
             </Flex>
             <Flex>
-              <Text fontSize='4xl'>Enterate de eventos Techno cerca!</Text>
+              <Text fontSize="4xl">Enterate de eventos Techno cerca!</Text>
             </Flex>
           </Box>
         </Flex>
