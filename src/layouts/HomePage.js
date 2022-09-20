@@ -34,22 +34,22 @@ function HomePage() {
           <Box alignSelf="center">
             <Flex>
               <Flex>
-                <Icon mr='1rem' as={GiCrownedSkull} fontSize="6xl" fill="#dedede" />
+                <Icon mr="1rem" as={GiCrownedSkull} w='200px' h='500px' fill="red" />
                 <Text
-                  fontSize="2xl"
-                  color="#9e002c"
-                  fontFamily={theme.fonts.secondary}
+                  fontSize="5xl"
+                  color="#ababab"
+                  fontFamily={theme.fonts.tertiary}
                   alignSelf="center"
                 >
-                  TICKET
+                  Rythm&
                 </Text>
                 <Text
-                  fontSize="4xl"
-                  color="#820A7E"
-                  fontFamily={theme.fonts.secondary}
+                  fontSize="5xl"
+                  color="#dedede"
+                  fontFamily={theme.fonts.tertiary}
                   alignSelf="center"
                 >
-                  App
+                  Lounge
                 </Text>
               </Flex>
             </Flex>

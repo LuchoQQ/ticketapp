@@ -5,9 +5,10 @@ import App from "./App";
 import "@fontsource/arimo/700.css";
 import "@fontsource/montserrat/600.css";
 import "@fontsource/poppins/900.css"
+import "@fontsource/expletus-sans/700.css"
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
-const theme = extendTheme({ fonts: { primary: "Montserrat", secondary: "Poppins"} });
+const theme = extendTheme({ fonts: { primary: "Montserrat", secondary: "Arimo", tertiary: "Expletus Sans"} });
 
 root.render(
   <React.StrictMode>
