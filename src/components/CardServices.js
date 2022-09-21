@@ -14,7 +14,7 @@ import React from "react";
 import { MdOutlineDesignServices } from "react-icons/md";
 import { BsBrush } from "react-icons/bs";
 
-function CardServices({ color, base, neutral }) {
+function CardServices({ color, base, neutral, content, icon, title }) {
   const theme = useTheme();
   const ChakraBox = chakra(motion.div, {
     /**
@@ -95,7 +95,7 @@ function CardServices({ color, base, neutral }) {
         >
           <Grid gap="1rem">
             <Icon
-              as={BsBrush}
+              as={icon}
               w="100%"
               fill={neutral}
               fontSize={["4xl", "4xl", "4xl", "4xl", "5xl", "7xl"]}
@@ -105,7 +105,7 @@ function CardServices({ color, base, neutral }) {
               textAlign="center"
               fontSize={["xl", "xl", "xl", "xl", "xl", "3xl"]}
             >
-              Design
+              {title}
             </Text>
           </Grid>
           <Text
@@ -113,8 +113,7 @@ function CardServices({ color, base, neutral }) {
             fontSize={["sm", "sm", "sm", "sm", "sm", "lg"]}
             textAlign="center"
           >
-            Voluptate Lorem aliquip officia amet ad minim laborum sint ipsum
-            laboris fugiat ex nisi.
+            {content}
           </Text>
         </Flex>
       </ChakraBox>
