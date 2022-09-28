@@ -35,6 +35,7 @@ function ServicesPage() {
             icon={MdOutlineEventNote}
             title="Eventos"
             content="Organizá tu evento con nosotros!"
+            description="Disfruta de tus artistas internacionales favoritos en Ibiza!"
           />
           <CardServices
             color={"linear-gradient(0deg, transparent, #005dba, #005dba)"}
@@ -42,7 +43,8 @@ function ServicesPage() {
             base="linear-gradient(270deg, rgba(0,93,186,1) 12%, rgba(27,130,232,1) 45%, rgba(46,149,252,1) 84%)"
             icon={FaCocktail}
             title="RestoBar"
-            content="Disponemos de servicio de catering"
+            content="Servicio de catering"
+            description="Gozá de los mejores cócteles y tragos hechos por nuestros profesionales bartenders"
           />
           <CardServices
             color="linear-gradient(0deg, transparent, #cd5400, #cd5400)"
@@ -51,7 +53,7 @@ function ServicesPage() {
             icon={FaTicketAlt}
             title="Reservas"
             content="Entradas anticipadas"
-            
+            description="Reserva tu mesa y en el día del evento accede directamente con tu QR!"
           />
         </Grid>
       </Grid>

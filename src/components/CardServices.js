@@ -11,10 +11,16 @@ import {
 } from "@chakra-ui/react";
 import { isValidMotionProp, motion } from "framer-motion";
 import React from "react";
-import { MdOutlineDesignServices } from "react-icons/md";
-import { BsBrush } from "react-icons/bs";
 
-function CardServices({ color, base, neutral, content, icon, title }) {
+function CardServices({
+  color,
+  base,
+  neutral,
+  content,
+  icon,
+  title,
+  description,
+}) {
   const theme = useTheme();
   const ChakraBox = chakra(motion.div, {
     /**
@@ -114,6 +120,14 @@ function CardServices({ color, base, neutral, content, icon, title }) {
             textAlign="center"
           >
             {content}
+          </Text>
+          <Text
+            color="#ababab"
+            fontSize={["sm", "sm", "sm", "sm", "sm", "lg"]}
+            textAlign="center"
+            px='1rem'
+          >
+            {description}
           </Text>
         </Flex>
       </ChakraBox>

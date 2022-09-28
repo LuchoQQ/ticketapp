@@ -1,16 +1,18 @@
 import { Box, Flex, Image, Text, useTheme } from "@chakra-ui/react";
 import React from "react";
 
-function EventCard() {
+function EventCard({src}) {
   const theme = useTheme();
   return (
     <>
       <Flex flexDir="column" h="auto" minW="20vw" gap="1rem" maxW="20rem">
         <Box w="100%" overflow="hidden">
           <Image
-            src="https://res.cloudinary.com/diylksocz/image/upload/v1663179911/279140078_1780149818982718_5146374659619253410_n_fxdjiq.jpg"
+            src={src}
             objectFit="cover"
             transition="all 0.2s ease"
+            h='200'
+            w='100%'
             _hover={{
               transform: "scale(1.1)",
             }}

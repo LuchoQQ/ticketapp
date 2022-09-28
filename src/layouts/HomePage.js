@@ -40,52 +40,49 @@ function HomePage() {
           justifyItems="center"
           alignItems="center"
         >
-          <Flex flexDir="column" gap="1rem">
-            <Icon
-              as={GiCrownedSkull}
-              w="100px"
-              h="100px"
-              alignSelf="center"
-              mb="auto"
-            />
-            <Flex
-              fontSize="6xl"
-              fontFamily={theme.fonts.tertiary}
-              color="#9e002c"
-              alignSelf="center"
-            >
-              IBIZA
+          <Flex flexDir="column" h="100%" w="100%">
+            <Flex alignSelf="center" mt="30vh" flexDir="column">
+              <Text
+                fontSize="8xl"
+                fontFamily={theme.fonts.tertiary}
+                color="rgba(198, 16, 161, 0.8)"
+                textShadow="2px 2px 2px #202020"
+              >
+                IBIZA
+              </Text>
+              <Text
+                fontSize="1xl"
+                fontFamily={theme.fonts.tertiary}
+                color="rgba(222, 222, 222, 0.8)"
+                alignSelf="center"
+                position="relative"
+                top="-30px"
+              >
+                Bar & Lounge
+              </Text>
             </Flex>
-            <Flex
-              fontSize="xl"
-              fontFamily={theme.fonts.primary}
-              color="#ababab"
-              textAlign="center"
-            >
-              Nightclub & Lounge Bar
+            <Flex mt="auto" mb="10vh" alignSelf="center">
+              <Image
+                src="https://res.cloudinary.com/diylksocz/image/upload/v1663783284/png-clipart-jagermeister-logo-font-brand-jagermeister-logo-label-trademark-removebg-preview_vwayck.png"
+                w="100px"
+                fit="contain"
+              />
+              <Image
+                src="https://res.cloudinary.com/diylksocz/image/upload/v1663783654/585e5d9dcb11b227491c33ea-removebg-preview_nlzaeh.png"
+                w="100px"
+                fit="contain"
+              />
+              <Image
+                src="https://res.cloudinary.com/diylksocz/image/upload/v1663783353/png-clipart-heineken-english-free-buckle-material-logo-removebg-preview_q0ljjz.png"
+                w="100px"
+                fit="cover"
+              />
+              <Image
+                src="https://res.cloudinary.com/diylksocz/image/upload/v1663783482/spreed-removebg-preview_aupb47.png"
+                w="100px"
+                fit="cover"
+              />
             </Flex>
-          </Flex>
-          <Flex>
-            <Image
-              src="https://res.cloudinary.com/diylksocz/image/upload/v1663783284/png-clipart-jagermeister-logo-font-brand-jagermeister-logo-label-trademark-removebg-preview_vwayck.png"
-              w="100px"
-              fit="contain"
-            />
-            <Image
-              src="https://res.cloudinary.com/diylksocz/image/upload/v1663783654/585e5d9dcb11b227491c33ea-removebg-preview_nlzaeh.png"
-              w="100px"
-              fit="contain"
-            />
-            <Image
-              src="https://res.cloudinary.com/diylksocz/image/upload/v1663783353/png-clipart-heineken-english-free-buckle-material-logo-removebg-preview_q0ljjz.png"
-              w="100px"
-              fit="cover"
-            />
-            <Image
-              src="https://res.cloudinary.com/diylksocz/image/upload/v1663783482/spreed-removebg-preview_aupb47.png"
-              w="100px"
-              fit="cover"
-            />
           </Flex>
           {/* <Flex flexDir="column" alignContent="center" gap="2rem" w="40vw">
             <Flex justifyContent="center" mb="auto">

@@ -38,8 +38,8 @@ function ContactPage() {
         fontFamily={theme.fonts.primary}
         gap="3rem"
       >
-        <SectionTitle title='Contact' bg='#dedede'/>
-        <Box minW="320px" w="50vw" maxW="500px" bg="#202020" p="2rem">
+        <SectionTitle title="Contact" bg="#dedede" />
+        <Box minW="320px" w="50vw" maxW="500px" bg="#202020" p="1rem" rounded='10px'>
           <form onSubmit={formik.handleSubmit}>
             <VStack spacing={4} align="flex-start">
               <FormControl>
@@ -47,7 +47,7 @@ function ContactPage() {
                   Email Address
                 </FormLabel>
                 <Input
-                  size="lg"
+                  size="sm"
                   id="email"
                   name="email"
                   type="email"
@@ -62,7 +62,7 @@ function ContactPage() {
                   Name
                 </FormLabel>
                 <Input
-                  size="lg"
+                  size="sm"
                   id="name"
                   name="name"
                   type="name"
@@ -78,7 +78,7 @@ function ContactPage() {
                   Message
                 </FormLabel>
                 <Textarea
-                  size="lg"
+                  size="sm"
                   id="message"
                   name="message"
                   type="message"

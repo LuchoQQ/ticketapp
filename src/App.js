@@ -1,50 +1,11 @@
-import {
-  Box,
-  Button,
-  Flex,
-  Grid,
-  useTheme,
-  keyframes,
-  chakra,
-  shouldForwardProp,
-} from "@chakra-ui/react";
-import { motion, isValidMotionProp } from "framer-motion";
+import { Grid, Text, theme } from "@chakra-ui/react";
 import "./App.css";
 import Header from "./components/Header";
 import HomePage from "./layouts/HomePage";
-import { useFormik } from "formik";
 import ContactPage from "./layouts/ContactPage";
 import ServicesPage from "./layouts/ServicesPage";
 import EventsPage from "./layouts/EventsPage";
 function App() {
-  const theme = useTheme();
-  const formik = useFormik({
-    initialValues: {
-      email: "",
-      name: "",
-      message: "",
-    },
-    onSubmit: (values) => {
-      alert(JSON.stringify(values, null, 2));
-    },
-  });
-
-  const animationKeyframes = keyframes`
-  0% { transform: rotate(0deg) }
-  25% { transform: rotate(90deg) }
-  50% { transform: rotate(180deg) }
-  75% { transform: rotate(270deg) }
-  100% { transform: rotate(360deg) }
-  `;
-  const animation = `${animationKeyframes} 5s ease-in-out infinite`;
-
-  const ChakraBox = chakra(motion.div, {
-    /**
-     * Allow motion props and non-Chakra props to be forwarded.
-     */
-    shouldForwardProp: (prop) =>
-      isValidMotionProp(prop) || shouldForwardProp(prop),
-  });
   return (
     <>
       {/* Body */}
@@ -62,6 +23,31 @@ function App() {
           <ContactPage />
         </section>
         <Header />
+        <footer>
+          <Grid
+            w="100vw"
+            h="20vh"
+            bg="#202020"
+            justifyContent="center"
+            alignContent="center"
+          >
+            <Text
+              fontSize="lg"
+              color="#dedede"
+              fontFamily={theme.fonts.primary}
+            >
+              Copyright 2022 © | Ibiza Bar & Lounge 
+            </Text>
+            <Text
+              fontSize="lg"
+              color="#dedede"
+              fontFamily={theme.fonts.primary}
+              textAlign='center'
+            >
+              Created by LuchoQQ
+            </Text>
+          </Grid>
+        </footer>
       </Grid>
     </>
   );
